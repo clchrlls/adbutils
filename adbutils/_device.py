@@ -813,8 +813,8 @@ class AdbDevice(BaseDevice):
         Args:
             text: text to be type
         """
-        escaped_text = self._escape_special_characters(text)
-        return self.shell(['input', 'text', escaped_text])
+        # escaped_text = self._escape_special_characters(text)
+        return self.shell(['input', 'text', text])
 
     @staticmethod
     def _escape_special_characters(text):
